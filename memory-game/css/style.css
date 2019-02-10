@@ -1,0 +1,115 @@
+body {
+  text-align: center;
+  margin: 0;
+}
+header {
+  background-color: #F15B31;
+  color: #FFFFFF;
+  padding: 30px 20px;
+}
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #OD2C40;
+  font-size: 45px;
+  letter-spacing: 1px;
+  margin: 0; /* this seems like very common practice to reduce the body and header margins to 0*/
+}
+h2 {
+  text-transform: capitalize;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  text-transform:uppercase;
+  color: #F15B31;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: #OD2C40;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+  }
+p {
+  font-family: "Droid Serif", serif;
+  line-height: 26px;
+  font-size: 14px;
+}
+
+nav {
+  /* display: inline; */
+  background-color: #00A6B3;
+  color: #FFFFFF;
+  padding: 20px 0;
+}
+
+a {
+  margin: 0 20px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+
+a:hover {
+  border-color: white;
+}
+
+main {
+  width: 850px;
+  margin: 35px auto;
+}
+
+img {
+  margin: 40px 8px 0px 8px;
+}
+
+.message {
+  float: right;
+}
+
+.copyright {
+  float: left;
+}
+
+footer {
+  text-transform: uppercase;
+  padding: 0 20px;
+  background-color: #0D2C40;
+  color: white;
+  font-size: 14px;
+  letter-spacing: .08em;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+}
+
+.clearfix:after {
+visibility: hidden;
+display: block;
+content: " ";
+clear: both;
+height: 0;
+font-size: 0;
+}
+
+.name {
+  color: #F15B31;
+  font-weight: 700;
+}
+
+/* Each paragraph should be displayed using the "Raleway" font family.
+
+Float .copyright to the left.
+
+Float .message to the right. */
+
+
+/* Now let's add some styles to the nav. Give the nav element a background-color of #00A6B3, a font color of white (#FFFFFF), and 20px padding on the top and bottom.
+
+The anchors in our nav are a little too close together! Give the a elements 20px margin on the right and left sides.
+
+Now let's center the main content of our page. Give main a width of 850px. Add 35px margin to the top and bottom of main and set the left and right margins to auto to center the main section.
+
+Our card images also look like they are spaced a little too tightly. Give each img 40px margin on the top, and 8px margin on the right and left. */
