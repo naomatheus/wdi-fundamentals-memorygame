@@ -1,8 +1,32 @@
 console.log("Up and running");
 
 
-var cards = ["queen","queen","king","king"];
+// var cards = ["queen","queen","king","king"];
+var cards = [
+  {
+  rank: "queen",
+  suit: "hearts",
+  cardImage: "memory-game/images/queen-of-hearts.png"
+  },
+  {
+  rank: "queen",
+  suit: "diamonds",
+  cardImage: "memory-game/images/queen-of-diamonds.png"
+  },
+  {
+  rank: "king",
+  suit: "hearts",
+  cardImage: "memory-game/images/king-of-hearts.png"
+  },
+  {
+  rank: "king",
+  suit: "diamonds",
+  cardImage: "memory-game/images/king-of-diamonds.png"
+  }
+];
+
 var cardsInPlay = [];
+
 
 var checkForMatch = function(){
   if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -13,15 +37,30 @@ var checkForMatch = function(){
 };
 
 var flipCard = function(cardId){
-  cardsInPlay.push(cards[cardId]);
-  console.log("User flipped " + cards[cardId]);
+  cardsInPlay.push(cards[cardId].rank);
+  // cardsInPlay.push(cards[cardId]); I think this needed to be updated too
+  console.log("User flipped " + cards[cardId].rank);
   if (cardsInPlay.length === 2) {
   }
+  console.log(cards[cardId].cardImage);
+  console.log(cards[cardId].suit);
 };
 
 flipCard(0);
 flipCard(2);
 checkForMatch();
+
+console.log(cardsInPlay);
+
+
+// Now let's add a bit of new code so that we can "see" the cards that are flipped in our console. Add two console.log() statements. One should log the cardImage and the other should log the suit for the flipped card.
+
+// In the flipCard function, find this console.log statement: console.log("User flipped " + cards[cardId]);
+// Update the portion cards[cardId]. Right now, this code is accessing the entire first object in the cards array. You'll want to update this code so that we are accessing the rank property of this object.
+
+// Delete the four strings from the cards array.
+// In the cards array, create four objects, one for each card
+
 
 // Next, we'll want to add the card that the user flipped to the cardsInPlay array.
 //
