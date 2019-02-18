@@ -29,25 +29,57 @@ var cardsInPlay = [];
 
 
 var checkForMatch = function(){
+  if (cardsInPlay.length === 2) {
+
   if (cardsInPlay[0] === cardsInPlay[1]) {
     alert("You have a match!");
   } else if (cardsInPlay[0] !== cardsInPlay[1]) {
     alert("Sorry, try again");
   }
+}
 };
 
-var flipCard = function(cardId){
+var flipCard = function(){
+  var cardId = this.getAttribute('data-id');
   cardsInPlay.push(cards[cardId].rank);
-  // cardsInPlay.push(cards[cardId]); I think this needed to be updated too
+//   On the first line inside the flipCard function, use the getAttribute method to get the data-id attribute of the card that was just clicked and store it in a variable cardId.
+// HINT: We can use the this keyword to access the card that was clicked: this.getAttribute('attribute-we-want-to-get-goes-here');
   console.log("User flipped " + cards[cardId].rank);
+  this.setAttribute('src',cards[cardId].cardImage);
   if (cardsInPlay.length === 2) {
   }
   console.log(cards[cardId].cardImage);
   console.log(cards[cardId].suit);
 };
 
-flipCard(0);
-flipCard(2);
+var createBoard = function(arr){
+  for (var i = 0; i < arr.length; i++){
+    // var newListItem = document.createElement('img');
+
+    var cardElement = document.createElement('img')
+    // cardElement.setAttribute('attributeName', 'attributeValue');
+    cardElement.setAttribute('src','memory-game/images/back.png');
+    cardElement.setAttribute('data-id',i);
+    cardElement.addEventListener('click',flipCard);
+    document.getElementById('game-board').appendChild(cardElement);
+  };
+};
+
+
+
+// Next, use the addEventListener() method on the cardElement. Add a click event so that when a user clicks on a card, the flipCard function is called.
+// Now you have a complete game card, stored in cardElement! Great job.
+//
+// As the last piece of the for loop, append the cardElement to the game board (which has an id of game-board).
+// Hint: use the appendChild() method to do this.
+
+// Next, use the setAttribute() method on cardElement once again. Set the card's 'data-id' attribute to be the current index of the card array, i (no quotes). Now, we can track which card it is.
+// NOTE: data- attributes are meant to store data about an element that is not tied to a style.
+
+// flipCard(0);
+// flipCard(2);
+
+createBoard(cards);
 checkForMatch();
 
 console.log(cardsInPlay);
