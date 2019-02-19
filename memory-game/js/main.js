@@ -1,5 +1,5 @@
 console.log("Up and running");
-
+debugger;
 
 // var cards = ["queen","queen","king","king"];
 var cards = [
@@ -50,6 +50,8 @@ var flipCard = function(){
   }
   console.log(cards[cardId].cardImage);
   console.log(cards[cardId].suit);
+  console.log(cardsInPlay);
+  checkForMatch();
 };
 
 var createBoard = function(arr){
@@ -80,7 +82,7 @@ var createBoard = function(arr){
 // flipCard(2);
 
 createBoard(cards);
-checkForMatch();
+
 
 console.log(cardsInPlay);
 
